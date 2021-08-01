@@ -40,3 +40,6 @@ Web appen krever 2 personer, en elev og en lærer. Kravet til læreren er at per
 Eleven leser ordet på skjermen, når ordet er lest riktig trykker læreren på "neste" knappen. Da kommer det ett nytt ord opp. Dette repiteres så lenge man ønsker.
 
 
+Demoversjon
+-----------
+Spillbar demoversjon er tilgjengelig [her](https://ogidet.no/index.php?pid=3654625476514)
