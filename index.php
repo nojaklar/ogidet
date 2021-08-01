@@ -44,7 +44,7 @@ echo '</div>';
 	
 } else {
 
-	echo "Hvis du har spørsmål, vennligst kontakt post[a]ogidet.no";	
+	echo "Hvis du har spørsmål, vennligst kontakt Lars";	
 
 	
 }

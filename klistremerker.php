@@ -21,7 +21,6 @@ include 'check_list.php';
 #----------------------check list------------------------------------------
 
 
-//klistremerker.php?pid=3654625476514
 
 $pid = $_GET['pid'];
 

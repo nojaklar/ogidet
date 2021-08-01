@@ -241,13 +241,6 @@ $buttonNext=""; $buttonEnd=""; $sqlCurrentWord="";  $resultCurrentWord = "";  $g
 //getWord function
 function getWord($conn,$pid,&$sqlCurrentWord,&$resultCurrentWord ,&$getCurrentWord ,&$word ,&$id,&$starttime,&$startmillisecond)
 {
-	//global $pid;
-	
-	//test wordsplitt sql 141 = 1 splitt 197 = 2 splitt
-	//$sqlCurrentWord = "SELECT 3654625476514, ID, STRING_HTML AS WORD, now(3) AS STARTTIME, ROUND(UNIX_TIMESTAMP(CURTIME(4)) * 1000) AS STARTMILLISECOND FROM WORD WHERE ID = 197"; 
-
-	
-	//$sqlCurrentWord = "SELECT PID, WORDID, WORD, STARTTIME, STARTMILLISECOND FROM V_WORD_GAME WHERE PID = ".$pid." ORDER BY RAND() LIMIT 1";
 		
 	$sqlCurrentWord ="WITH PLAYER_WORD AS
 (
@@ -400,7 +393,6 @@ function getPlayerName($conn,$pid)
 
 function logToDB($conn,$id,$pid,$stm,$stms)
 {
-	//$testMedalje ="ttetet";
 
 	settype($id, "int");
 		//logging time
