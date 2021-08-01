@@ -7,6 +7,11 @@ Formålet med denne web appen er å gjøre jobbing med høyfrekvente ordlister m
 For å gjøre arbeidet morsomt er det implementer elementer av spillifisering/gamification. Dette er gjort gjennom forskjellige stjerner og merker.
 For å gjøre arbeidet effektivt er det implementer algoritmer som identifiserer ord som er lært så fort som mulig slik at man ikke trenger bruke tid på ord man kan lese.
 
+Inspirasjon
+-----------
+Inspirasjonen til denne web appen har jeg funnet i boken [Å bedre barns leseflyt](https://www.ark.no/boker/Jan-Erik-Klinkenberg-A-bedre-barns-leseflyt-9788203312168)
+
+
 
 Teknologi
 ---------
