@@ -1,0 +1,140 @@
+body {
+        background-color: #A9D941;
+    }
+
+.button {
+  background-color: #556d21;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+
+.grid {
+  display: grid;
+  max-width: 1200px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 0.5rem;
+}
+
+
+.grid-item {
+  background-color: #cbe88d;
+  text-align:center;
+
+}
+
+
+.grid-item img {
+    max-height:80px;
+    max-width:80px;
+	
+ }
+
+.grid-item-filter img {
+	filter: grayscale(100%) opacity(30%);
+	
+ }
+
+.grid-item-no-filter img {
+ }
+
+
+.grid-sub-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.klistremerkenavn {
+	padding: 5px;
+	font-size: 20px;
+	
+}
+
+
+.progress-bar {
+	width: 180px;
+	background-color: #e5f4c6;
+	padding: 3px;
+	border-radius: 3px;
+	
+
+}
+
+.progress-bar-fill {
+	display: block;
+	background-color: #e0e0e0;
+	border-radius: 3px;
+}
+
+
+.progress-bar-fill-bronze {
+	display: block;
+	height: 15px;
+	background-color: #C9AE5D;
+	border-radius: 3px;
+}
+
+
+.progress-bar-fill-silver {
+	display: block;
+	height: 15px;
+	background-color: #C0C0C0;
+	border-radius: 3px;
+}
+
+.progress-bar-fill-gold {
+	display: block;
+	height: 15px;
+	background-color: #DAA520;
+	border-radius: 3px;
+}
+
+
+
+.ordboks {
+background-color:#eee;
+
+}
+
+
+.stars  {
+	padding: 5px;
+	
+ }
+ 
+.stars img {
+    max-height:25px;
+    max-width:25px;
+	
+ }
+
+.sma-klistremerker
+{
+	padding: 5px;
+ }
+ 
+.sma-klistremerker img
+{
+    max-height:25px;
+    max-width:25px;
+	
+ }
+
+
+.ordet-i-grid h2 {
+	height:20px;
+}
+
+
+
+
