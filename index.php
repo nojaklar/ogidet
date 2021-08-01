@@ -22,7 +22,6 @@ include 'check_list.php';
 
 
 
-///http://localhost:8000/index.php?pid=3654625476514
 
 $pid = $_GET['pid'];
 
@@ -45,7 +44,7 @@ echo '</div>';
 	
 } else {
 
-	echo "Hvis du har spørsmål, vennligst kontakt Lars";	
+	echo "Hvis du har spørsmål, vennligst kontakt post[a]ogidet.no";	
 
 	
 }
