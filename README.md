@@ -19,7 +19,7 @@ Web appen utvikles i php og mysql.
 
 Status
 ------
-Web appen virker men er ikke ferdig utviklet. Det er mulig å teste appen på denne siden link.
+Web appen virker men er ikke ferdig utviklet. 
 
 
 Installasjon
