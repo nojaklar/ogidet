@@ -6,205 +6,9 @@
 	<title>Og i det</title>
 	<link rel="stylesheet" type="text/css" href="css/ogidet.css">
 
-	<style>
-	
-body {
-        background-color: #EDD1B0;
-    }
 
-div.main {
-  position:absolute;
-  top:30%;
-  left:50%;
-  padding:15px;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-}
-	
-
-	
-div.menuright {
-  position:absolute;
-  top:10%;
-  left:93%;
-  padding:15px;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-}
-
-div.menuStartNext {
-  position:absolute;
-  top:67%;
-  left:93%;
-  padding:15px;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-}
-
-DIV.word {
-	font-family: 'Helvetica', 'Arial', sans-serif;
-	letter-spacing:1px;
-	display: inline-block;
-	padding: 5px;
-	text-align: center;
-	font-size: 40px;
-	transition: all 0.2s ease-out;
-}
-
-
-.price {
-  position:relative;
-  /*top:50%;*/
-  /*left:45%;*/
-  text-align: center;
-  font-size: 75px;
-  /*width: 600px;*/
-	
-	
-}
-
-.price img {
-    max-height:75px;
-    max-width:75px;
-	
- }
-
-div.score {
-  position:absolute;
-  top:5%;
-  left:2%;
-	
-	
-}
-
-div.score_bronze {
-	color: #C9AE5D;
-	font: small-caps bold 24px/1 sans-serif;
-	
-}
-
-div.score_silver {
-	color: #C0C0C0;
-	font: small-caps bold 24px/1 sans-serif;
-	
-}
-
-
-div.score_gold {
-	color: #DAA520;
-	font: small-caps bold 24px/1 sans-serif;
-	
-}
-
-
-div.price_bronze {
-	color: #C9AE5D;
-	
-}
-
-div.price_silver {
-	color: #C0C0C0;
-	
-}
-
-div.price_gold {
-	color: #DAA520;
-	
-}
-
-
-input.next {
-		font-size : 20px; 
-		width: 7em;  
-		height: 5em;
-		background-color: #D6BF94;
-}
-
-	
-	
-	
-	:root {
-  --animationDurationSplitt: 4s;
-  --animationDelaySplitt: 4s;
-  
-	}
-	
-	.ordSplitt1 {
-  position: relative;
-  animation-name: ordSplitt1;
-  animation-duration: var(--animationDurationSplitt);
-  animation-delay: var(--animationDelaySplitt);
-  animation-fill-mode: forwards;
-}
-
-@keyframes ordSplitt1 {
-  0%   {left:0px; top:0px;}
-  100% {left:7px; top:0px;}
-}
-
-.ordSplitt2 {
-  position: relative;
-  animation-name: ordSplitt2;
-  animation-duration: var(--animationDurationSplitt);
-  animation-delay: var(--animationDelaySplitt);
-  animation-fill-mode: forwards;
-}
-
-@keyframes ordSplitt2 {
-  0%   {left:0px; top:0px;}
-  100% {left:15px; top:0px;}
-}
-
-
-div.price_hide {
-  -webkit-animation: seconds 1.0s forwards;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-delay: 5s;
-  animation: seconds 1.0s forwards;
-  animation-iteration-count: 1;
-  animation-delay: 1500ms;
-  
-  
-}
-@-webkit-keyframes seconds {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    left: -9999px; 
-  }
-}
-@keyframes seconds {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    left: -9999px; 
-  }
-}
-
-
-.blink_me {
-  animation: blinker .5s linear;
-  
-}
-
-@keyframes blinker {
-  50% {
-    opacity: 0;
-  }
-}
-
-
-	
-	</style>
 </head>
-<body>
+<body class="gamepage">
 
 
 <?php
@@ -275,7 +79,7 @@ function getWord($conn,$pid,&$sqlCurrentWord,&$resultCurrentWord ,&$getCurrentWo
 )
 , BRONZE AS
 (
-	SELECT T1.PID, T1.WORDID FROM PLAYER_WORD T1
+	SELECT T1.PID, T1.WORDID, T1.WORDRANK FROM PLAYER_WORD T1
 	-- FJERNE DE SOM ER KLART PÅ DETTE NIVÅ
 	LEFT JOIN V_BRONZE_STARS T2 ON T1.PID = T2.PID AND T1.WORDID = T2.WORDID AND T2.BRONZE_STARS >= 5
 	-- FJERNE DE SOM ER KLART PÅ HØYERE NIVÅ
@@ -289,7 +93,7 @@ function getWord($conn,$pid,&$sqlCurrentWord,&$resultCurrentWord ,&$getCurrentWo
 )
 , SILVER AS
 (
-	SELECT T1.PID, T1.WORDID FROM PLAYER_WORD T1
+	SELECT T1.PID, T1.WORDID, T1.WORDRANK FROM PLAYER_WORD T1
 	-- FJERNE DE SOM ER KLART PÅ DETTE NIVÅ
 	LEFT JOIN V_SILVER_STARS T2 ON T1.PID = T2.PID AND T1.WORDID = T2.WORDID AND T2.SILVER_STARS >= 5
 	-- FJERNE DE SOM ER KLART PÅ HØYERE NIVÅ
@@ -300,7 +104,7 @@ function getWord($conn,$pid,&$sqlCurrentWord,&$resultCurrentWord ,&$getCurrentWo
 )
 , GOLD AS
 (
-	SELECT T1.PID, T1.WORDID FROM PLAYER_WORD T1
+	SELECT T1.PID, T1.WORDID, T1.WORDRANK FROM PLAYER_WORD T1
 	LEFT JOIN V_GOLD_STARS T2 ON T1.PID = T2.PID AND T1.WORDID = T2.WORDID AND T2.GOLD_STARS >= 5
 	WHERE 1=1
 	AND T2.WORDID IS NULL
@@ -315,7 +119,7 @@ function getWord($conn,$pid,&$sqlCurrentWord,&$resultCurrentWord ,&$getCurrentWo
 	WHERE 1=1
 	AND T2.WORDID IS NULL
 	AND T3.WORDID IS NULL
-	ORDER BY T1.WORDID
+	ORDER BY T1.WORDRANK
 	LIMIT 10
 )
 -- SELECT * FROM GROUP_BRONZE;
@@ -330,7 +134,7 @@ function getWord($conn,$pid,&$sqlCurrentWord,&$resultCurrentWord ,&$getCurrentWo
 	AND T2.WORDID IS NULL
 	AND T3.WORDID IS NULL
 	AND T4.WORDID IS NULL
-	ORDER BY T1.WORDID
+	ORDER BY T1.WORDRANK
 	LIMIT 8
 )
 -- SELECT * FROM GROUP_SILVER;
@@ -347,7 +151,7 @@ function getWord($conn,$pid,&$sqlCurrentWord,&$resultCurrentWord ,&$getCurrentWo
 	AND T3.WORDID IS NULL
 	AND T4.WORDID IS NULL
 	AND T5.WORDID IS NULL
-	ORDER BY T1.WORDID
+	ORDER BY T1.WORDRANK
 	LIMIT 5
 )
 -- SELECT * FROM GROUP_GOLD;
