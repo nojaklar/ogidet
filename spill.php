@@ -393,6 +393,7 @@ elseif  ($_POST["process"] =="end") {
 else // Ready for start 
 	{
 	$name = getPlayerName($conn,$pid);
+	$score = inGameScore($conn,$pid,$prev_bronze,$prev_silver,$prev_gold);
 		
 	$word = "Klar til start ".$name."?";
 	//nextButton($buttonNext,$buttonEnd);	
