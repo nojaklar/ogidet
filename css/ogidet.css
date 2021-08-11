@@ -1,6 +1,11 @@
-body {
+
+.pages {
         background-color: #A9D941;
     }
+
+.gamepage { 
+		background-color: #EDD1B0;
+	}
 
 .button {
   background-color: #556d21;
@@ -134,6 +139,201 @@ background-color:#eee;
 .ordet-i-grid h2 {
 	height:20px;
 }
+
+
+/*------------------------fra spill.php nedenfor her-----------------------------*/
+
+
+
+div.main {
+  position:absolute;
+  top:30%;
+  left:50%;
+  padding:15px;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+	
+
+	
+div.menuright {
+  position:absolute;
+  top:10%;
+  left:93%;
+  padding:15px;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+div.menuStartNext {
+  position:absolute;
+  top:67%;
+  left:93%;
+  padding:15px;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+DIV.word {
+	font-family: 'Helvetica', 'Arial', sans-serif;
+	letter-spacing:1px;
+	display: inline-block;
+	padding: 5px;
+	text-align: center;
+	font-size: 40px;
+	transition: all 0.2s ease-out;
+}
+
+
+.price {
+  position:relative;
+  /*top:50%;*/
+  /*left:45%;*/
+  text-align: center;
+  font-size: 75px;
+  /*width: 600px;*/
+	
+	
+}
+
+.price img {
+    max-height:75px;
+    max-width:75px;
+	
+ }
+
+div.score {
+  position:absolute;
+  top:5%;
+  left:2%;
+	
+	
+}
+
+div.score_bronze {
+	color: #C9AE5D;
+	font: small-caps bold 24px/1 sans-serif;
+	
+}
+
+div.score_silver {
+	color: #C0C0C0;
+	font: small-caps bold 24px/1 sans-serif;
+	
+}
+
+
+div.score_gold {
+	color: #DAA520;
+	font: small-caps bold 24px/1 sans-serif;
+	
+}
+
+
+div.price_bronze {
+	color: #C9AE5D;
+	
+}
+
+div.price_silver {
+	color: #C0C0C0;
+	
+}
+
+div.price_gold {
+	color: #DAA520;
+	
+}
+
+
+input.next {
+		font-size : 20px; 
+		width: 7em;  
+		height: 5em;
+		background-color: #D6BF94;
+}
+
+	
+	
+	
+	:root {
+  --animationDurationSplitt: 4s;
+  --animationDelaySplitt: 4s;
+  
+	}
+	
+	.ordSplitt1 {
+  position: relative;
+  animation-name: ordSplitt1;
+  animation-duration: var(--animationDurationSplitt);
+  animation-delay: var(--animationDelaySplitt);
+  animation-fill-mode: forwards;
+}
+
+@keyframes ordSplitt1 {
+  0%   {left:0px; top:0px;}
+  100% {left:7px; top:0px;}
+}
+
+.ordSplitt2 {
+  position: relative;
+  animation-name: ordSplitt2;
+  animation-duration: var(--animationDurationSplitt);
+  animation-delay: var(--animationDelaySplitt);
+  animation-fill-mode: forwards;
+}
+
+@keyframes ordSplitt2 {
+  0%   {left:0px; top:0px;}
+  100% {left:15px; top:0px;}
+}
+
+
+div.price_hide {
+/*
+  -webkit-animation: seconds 1.0s forwards;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-delay: 5s;
+  */
+  animation: seconds 2s forwards;
+  animation-iteration-count: 1;
+  /*animation-delay: 1500ms;*/
+  
+  
+}
+@-webkit-keyframes seconds {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    left: -9999px; 
+  }
+}
+@keyframes seconds {
+  0% { opacity: 1;  }
+  50% { opacity: 1; transform:scale(1.2);}
+  100% { opacity: 0; left: -9999px; 
+  }
+}
+
+
+.blink_me {
+  animation: blinker .5s linear;
+  
+}
+
+@keyframes blinker {
+  0% {    opacity: 1;}
+  10% {    opacity: 0; transform:scale(1.2);}
+  50% {    opacity: 0; transform:scale(1);}
+  100% {    opacity: 1;}
+}
+
+
 
 
 
