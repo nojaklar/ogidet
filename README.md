@@ -43,3 +43,11 @@ Eleven leser ordet på skjermen, når ordet er lest riktig trykker læreren på 
 Demoversjon
 -----------
 Spillbar demoversjon er tilgjengelig [her](https://ogidet.no/index.php?pid=3654625476514)
+
+Algoritme
+---------
+Bronse stjerne - Lest ett ord 5 ganger på under 4 sekunder
+Sølv stjerne - Lest ett ord 5 ganger på under 2,5 sekunder
+Gull stjerne - Lest ett ord 5 ganger på rad på under 2,5 sekunder
+
+Hvis trenger ikke gjennomføre alle nivåene. Hvis man får gull stjerner, får man automatisk sølv og bronse også.
