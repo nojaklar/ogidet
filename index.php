@@ -26,7 +26,7 @@ include 'check_list.php';
 
 $pid = $_GET['pid'];
 
-if (in_array($pid, $pid_list)) {
+if (isSet($flipped_pid_list[$pid])) {
 	
 
 echo '<h1>ogidet.no</h1>';
