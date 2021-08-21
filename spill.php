@@ -32,7 +32,7 @@ $prev_gold = $_POST['score_gold'];
 
 
 
-if (in_array($pid, $pid_list)) {
+if (isSet($flipped_pid_list[$pid])) {
 
 #----------------------
 
