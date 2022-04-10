@@ -28,6 +28,8 @@ For å kjøre/installere appen trenger man php 7.x og mysql 8.x. samt en webserv
 Filene i git repositoret kopieres til aktuell mappe på webserveren.
 Database objekter lages basert på informasjonen i \database\lage_database_objekter.sql
 
+[Installation using Docker](./README-installation.md)
+
 
 Konfigurasjon 
 -------------
