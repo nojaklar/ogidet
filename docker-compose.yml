@@ -1,0 +1,46 @@
+# Define all the necessary containers to run the application 
+version: "3.1"
+
+services:
+  # Container "apache webserver" built based on the image description in Dockerfile that is present in the same directory
+  # The port 80 of the container is link to the port 80 of the host
+  # The php src files are linked to the required directory inside the docker container
+  apache_webserver:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    volumes:
+      - ./src/:/var/www/html/
+  
+  # Container "db" build on mysql image (https://hub.docker.com/_/mysql)
+  # Create the user, password, database and assign the access rights
+  # The sql init files are copied to docker-entrypoint-initdb.d/ to be executed on the first execution
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password --character-set-server=UTF8MB4 --collation-server=UTF8MB4_unicode_ci --init-connect='SET NAMES UTF8MB4;' --innodb-flush-log-at-trx-commit=0
+    restart: always
+    volumes:
+      - ./database/:/docker-entrypoint-initdb.d/
+      - mysql-data:/var/lib/mysql
+    environment:
+      LANG: C.UTF-8
+      MYSQL_DATABASE: 'DEV_DB'
+      MYSQL_USER: 'bruker'
+      MYSQL_PASSWORD: 'passord'
+      MYSQL_ROOT_PASSWORD: 'password'
+
+
+  # Container "adminer" build on adminer image (https://hub.docker.com/_/adminer)
+  # To configure the database manually through an interface available on port 8080
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+# Keep the volumes of the database persistent
+# To reset the database: use the command (docker-compose down -v db) or (docker volume rm ogidet_mysql-data)
+volumes:
+  mysql-data:
