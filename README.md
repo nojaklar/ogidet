@@ -44,7 +44,7 @@ Eleven leser ordet på skjermen, når ordet er lest riktig trykker læreren på 
 
 Demoversjon
 -----------
-Spillbar demoversjon er tilgjengelig [her](https://ogidet.no/index.php?pid=3654625476514)
+Ikke tilgjengelig for øyeblikket.
 
 Algoritme
 ---------
